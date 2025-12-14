@@ -23,9 +23,7 @@ if (localStorage.getItem("contacts")) {
 }
 function itemsDeleted() {
   if (contactList.length == 0) {
-    document.querySelector(
-      "#calls"
-    ).innerHTML = `<div class="py-80">
+    document.querySelector("#calls").innerHTML = `<div class="py-80">
   <div class="d-flex flex-column justify-content-center align-items-center">
     <div class="p-4 mb-2 bg-black bg-opacity-25 d-flex justify-content-center align-items-center rounded-4">
       <i class="fa-solid fa-address-book fa-2x"></i>
@@ -182,7 +180,7 @@ function displayContacts() {
               </div>
               <div class="mt-3 gap-2 d-flex">
                 <span class="py-1 px-2 bg-red text-danger rounded-2
-${contactList[i].EmergencyInput ? '' : 'invisible'}">
+${contactList[i].EmergencyInput ? "" : "invisible"}">
   <i class="fa-solid fa-heart-pulse"></i> Emergency
 </span>
                 <span class="py-1 px-2 bg-red text-danger rounded-2 ${

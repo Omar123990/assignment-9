@@ -160,66 +160,66 @@ textarea.form-control {
 .p-10 {
   padding: 0.625rem;
 }
-.po-a-top{
+.po-a-top {
   position: absolute;
   top: -4px;
   right: -4px;
 }
-.po-a-bottom{
+.po-a-bottom {
   position: absolute;
   bottom: -4px;
   right: -4px;
 }
-.bg-call{
-  background-color: #DBEAFE;
+.bg-call {
+  background-color: #dbeafe;
 }
-.bg-email{
-  background-color: #EDE9FE;
+.bg-email {
+  background-color: #ede9fe;
 }
-.bg-map{
-  background-color: #D0FAE5;
+.bg-map {
+  background-color: #d0fae5;
 }
-.color-email{
-  color: #7F22FE;
+.color-email {
+  color: #7f22fe;
 }
-.py-10{
+.py-10 {
   padding-block: 0.625rem;
 }
-.redues-b-l-r{
+.redues-b-l-r {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
-.bg-green{
-  background-color: #DCFCE7;
+.bg-green {
+  background-color: #dcfce7;
 }
-.color-star{
-  color: #FBBF24;
+.color-star {
+  color: #fbbf24;
 }
-button:hover i.color-star{
-  color: #F59E0B;
+button:hover i.color-star {
+  color: #f59e0b;
 }
-.color-call{
-  color: #D97706;
+.color-call {
+  color: #d97706;
 }
-.color-heart{
-  color: #F43F5E;
+.color-heart {
+  color: #f43f5e;
 }
-button:hover i.color-heart{
+button:hover i.color-heart {
   color: #f32245;
 }
-.color-heart{
-  color: #F43F5E;
+.color-heart {
+  color: #f43f5e;
 }
-.color-trash{
+.color-trash {
   color: gray;
 }
-button:hover i.color-trash{
+button:hover i.color-trash {
   color: red;
 }
-.color-pen{
+.color-pen {
   color: gray;
 }
-button:hover i.color-pen{
+button:hover i.color-pen {
   color: orange;
 }
 .error-message {
