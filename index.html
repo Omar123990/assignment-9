@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContactHub - Smart Contact Manager</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar py-3 navbar-expand-lg bg-nav">
+      <div class="container">
+        <div class="d-flex align-items-center gap-3">
+          <div
+            class="bg-icon d-flex shadow-icon justify-content-center align-items-center w-44 rounded-4"
+          >
+            <i class="fa-solid fa-address-book text-white"></i>
+          </div>
+          <div class="d-flex me-1 flex-column">
+            <h1 class="h4 fw-bolder">
+              Contact<span class="color-text">Hub</span>
+            </h1>
+            <p class="text-secondary fw-medium fa-sm">SmartContactManager</p>
+          </div>
+        </div>
+
+        <div class="ms-auto mb-2 d-flex gap-2 mb-lg-0">
+          <div class="hover-1">
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              class="btn bg-icon-gradient rounded-3 text-white fw-bolder fw-semibold"
+            >
+              + Add <span>Contact</span>
+            </button>
+          </div>
+          <button class="btn hover-2 dd-none rounded-3">
+            <i class="fa-solid color-gray fa-bell"></i>
+          </button>
+          <button class="btn hover-2 dd-none rounded-3">
+            <i class="fa-solid color-gray fa-gear"></i>
+          </button>
+          <img class="w-40 rounded-3" src="images/avatar-4.jpg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content py-3 rounded-4">
+            <div class="modal-header">
+              <span class="modal-title h1 fs-5" id="staticBackdropLabel">
+                Add New Contact
+              </span>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body myScorll">
+              <div
+                class="d-flex pb-1 mb-20 flex-column gap-3 align-items-center justify-content-center"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center bg-blue w-96 rounded-circle"
+                >
+                  <i class="fa-solid fa-user text-white fa-xl"></i>
+                </div>
+                <label
+                  for="select-img"
+                  class="p-2 my-label bg-secondary bg-opacity-25 rounded-3"
+                >
+                  <i
+                    class="fa-solid me-2 fa-camera text-secondary text-opacity-75"
+                  ></i>
+                  <span>Change Photo</span>
+                  <input class="d-none" type="file" id="select-img" />
+                </label>
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <label for="full-name" class="mb-2"
+                  >Full Name <span class="text-danger">*</span></label
+                >
+                <input
+                  id="full-name"
+                  class="form-control rounded-4 form-control-lg"
+                  type="text"
+                  placeholder="Enter full name"
+                  aria-label="Full name"
+                />
+                <div id="fullNameError" class="error-message"></div>
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <label for="p-number" class="mb-2"
+                  >Phone Number <span class="text-danger">*</span></label
+                >
+                <input
+                  id="p-number"
+                  class="form-control rounded-4 form-control-lg"
+                  type="text"
+                  placeholder="e.g., 01012345678"
+                  aria-label="Phone number"
+                />
+                <div id="phoneError" class="error-message"></div>
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <label for="emailInput" class="mb-2"
+                  >Email Address <span class="text-danger">*</span></label
+                >
+                <input
+                  id="emailInput"
+                  class="form-control rounded-4 form-control-lg"
+                  type="email"
+                  placeholder="name@example.com"
+                  aria-label="Email address"
+                />
+                 <div id="emailError" class="error-message"></div>
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <label for="addressInput" class="mb-2"
+                  >Address <span class="text-danger">*</span></label
+                >
+                <input
+                  id="addressInput"
+                  class="form-control rounded-4 form-control-lg"
+                  type="text"
+                  placeholder="Enter Address"
+                  aria-label="Address"
+                />
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <label for="selectInput" class="mb-2">Group</label>
+                <select
+                  id="selectInput"
+                  class="form-select rounded-4"
+                  aria-label="Default select example"
+                >
+                  <option selected>Select a group</option>
+                  <option value="Family">Family</option>
+                  <option value="Friends">Friends</option>
+                  <option value="Work">Work</option>
+                  <option value="School">School</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column mb-20">
+                <div class="mb-3">
+                  <label for="notesInput" class="form-label">Notes</label>
+                  <textarea
+                    class="form-control rounded-4"
+                    id="notesInput"
+                    rows="2"
+                    placeholder="Add notes about this contact"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="d-flex gap-3 mb-20">
+                <label class="my-label" for="favoriteInput">
+                  <input type="checkbox" name="favorite" id="favoriteInput" />
+                  <span class="ms-1"
+                    ><i class="fa-solid fa-star text-warning"></i>favorite</span
+                  >
+                </label>
+                <label class="my-label" for="EmergencyInput">
+                  <input type="checkbox" name="Emergency" id="EmergencyInput" />
+                  <span class="ms-1"
+                    ><i class="fa-solid fa-heart-pulse text-danger"></i
+                    >Emergency</span
+                  >
+                </label>
+              </div>
+            </div>
+            <div class="p-3 d-flex flex-row">
+              <button
+                type="button"
+                class="btn w-50 me-2 text-black bg-secondary bg-opacity-25 rounded-3"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                onclick="saveContact()"
+                id="btnSave"
+                type="button"
+                class="btn w-50 d-block rounded-3 bg-icon-gradient text-white"
+              >
+                <i class="fa-solid fa-check"></i> Save Contact
+              </button>
+              <button
+                onclick="updateContact()"
+                id="btnUpdate"
+                type="button"
+                class="btn w-50 d-none rounded-3 bg-icon-gradient text-white"
+              >
+                <i class="fa-solid fa-check"></i> Update Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="py-5">
+        <div class="container">
+          <div class="row gy-4 mb-32">
+            <div class="col-6 col-lg-4">
+              <div
+                class="wraper color-border box-shadow box-hover p-4 bg-white rounded-4"
+              >
+                <div class="d-flex">
+                  <div
+                    class="d-flex me-2 p-3 rounded-3 shadow-blue justify-content-between bg-blue"
+                  >
+                    <i class="fa-solid fa-users text-white"></i>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <p class="text-secondary fw-bold mb-3">Total</p>
+                    <p id="totalNumber" class="fw-bolder mb-0 fa-xl">0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div
+                class="wraper color-border box-shadow box-hover p-4 bg-white rounded-4"
+              >
+                <div class="d-flex">
+                  <div
+                    class="d-flex me-2 p-3 shadow-gold rounded-3 justify-content-between bg-gold"
+                  >
+                    <i class="fa-solid fa-star text-white"></i>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <p class="text-secondary fw-bold mb-3">Favorites</p>
+                    <p id="favoriteNumber" class="fw-bolder mb-0 fa-xl">0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div
+                class="wraper color-border box-shadow box-hover p-4 bg-white rounded-4"
+              >
+                <div class="d-flex">
+                  <div
+                    class="d-flex me-2 p-3 shadow-red rounded-3 justify-content-between bg-icon-red"
+                  >
+                    <i class="fa-solid fa-heart-pulse text-white"></i>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <p class="text-secondary fw-bold mb-3">Emergency</p>
+                    <p id="emergencyNumber" class="fw-bolder mb-0 fa-xl">0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-9">
+              <h2 class="fw-bolder h3">All Contacts</h2>
+              <p class="text-secondary">Manage and organize your 1 contacts</p>
+              <div class="mb-3">
+                <input
+                oninput="search()"
+                  type="email"
+                  class="form-control rounded-4 py-3 w-100"
+                  id="searchInput"
+                  placeholder="Search contacts by name, email or phone..."
+                />
+              </div>
+              <div id="calls" class="row gy-3 mb-5"></div>
+            </div>
+            <div class="col-xl-3">
+              <div class="bg-white mb-3 box-shadow rounded-4">
+                <div class="bg-cards redues-t-l-r py-3 px-20">
+                  <div class="d-flex">
+                    <div class="p-2 me-2 h-fit rounded-3 bg-gold">
+                      <i class="fa-solid text-white fa-star"></i>
+                    </div>
+                    <div>
+                      <h2 class="h5 mb-0">Favorites</h2>
+                      <p class="mb-0 f-11 text-secondary">
+                        Quick access to starred contacts
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="favoriteNumbers" class="p-12"></div>
+              </div>
+              <div class="bg-white box-shadow rounded-4">
+                <div class="bg-red redues-t-l-r py-3 px-20">
+                  <div class="d-flex">
+                    <div class="p-2 me-2 h-fit rounded-3 bg-icon-red">
+                      <i class="fa-solid text-white fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                      <h2 class="h5 mb-0">Emergency</h2>
+                      <p class="mb-0 f-11 text-secondary">
+                        Important contacts for urgent calls
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="emergencyNumbers" class="p-12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

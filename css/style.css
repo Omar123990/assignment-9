@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../webfonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+body {
+  --bs-body-font-family: "Inter", sans-serif;
+}
+.bg-icon {
+  background-color: #5f34f9;
+}
+.color-text {
+  color: #7f22fe;
+}
+.bg-icon-gradient {
+  background: linear-gradient(to right, #a030ff, #4a3bff);
+}
+.w-44 {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.w-40 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.hover-1:hover {
+  transform: translateY(-5%);
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.hover-1 {
+  transition: all 0.2s ease-in-out;
+}
+.hover-2 {
+  transition: all 0.3s;
+}
+.color-gray {
+  color: #6b7280;
+  transition: all 0.3s;
+}
+.hover-2:hover {
+  --bs-btn-hover-color: #364153;
+  --bs-btn-hover-bg: #f3f4f6;
+}
+.hover-2:hover .color-gray {
+  color: #364153;
+}
+.bg-blue {
+  background-color: #1965fd;
+}
+.bg-nav {
+  background-color: #fdfdfe;
+}
+.mb-32 {
+  margin-bottom: 2rem;
+}
+.py-14 {
+  padding-block: 0.875rem;
+}
+.form-control {
+  padding: 0.75rem 1rem !important;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: rgb(142, 81, 255) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(142, 81, 255, 0.25) !important;
+}
+.py-80 {
+  padding-block: 5rem;
+}
+.w-80 {
+  width: 5rem;
+  height: 5rem;
+}
+.bg-cards {
+  background-color: #fff8ec;
+}
+.px-20 {
+  padding-inline: 1.25rem;
+}
+.bg-gold {
+  background-color: #ff7b00;
+}
+.h-fit {
+  height: fit-content;
+}
+.f-11 {
+  font-size: 0.6875rem;
+}
+.p-12 {
+  padding: 0.75rem;
+}
+.py-32 {
+  padding-block: 2rem;
+}
+.box-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.bg-red {
+  background-color: #fef2f2;
+}
+.bg-icon-red {
+  background-color: #f71143;
+}
+.shadow-blue {
+  box-shadow: 0 4px 6px -1px rgba(25, 101, 253, 0.3),
+    0 2px 4px -1px rgba(25, 101, 253, 0.06);
+}
+.shadow-gold {
+  box-shadow: 0 4px 6px -1px rgba(255, 123, 0, 0.3),
+    0 2px 4px -1px rgba(255, 123, 0, 0.06);
+}
+.shadow-red {
+  box-shadow: 0 4px 6px -1px rgba(247, 17, 67, 0.3),
+    0 2px 4px -1px rgba(247, 17, 67, 0.06);
+}
+.redues-t-l-r {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.shadow-icon {
+  box-shadow: 0 4px 6px -1px rgba(95, 52, 249, 0.3),
+    0 2px 4px -1px rgba(95, 52, 249, 0.06);
+}
+.color-border {
+  border: 1px solid #f3f4f6;
+}
+.box-hover {
+  transition: all 0.2s ease-in-out;
+}
+.box-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.w-96 {
+  width: 6rem;
+  height: 6rem;
+}
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+textarea.form-control {
+  min-height: auto !important;
+  height: 60px;
+}
+.myScorll::-webkit-scrollbar {
+  display: none;
+}
+.my-label {
+  cursor: pointer;
+}
+.form-select:focus {
+  border-color: rgb(142, 81, 255) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(142, 81, 255, 0.25) !important;
+}
+.w-fit {
+  width: fit-content;
+}
+.p-10 {
+  padding: 0.625rem;
+}
+.po-a-top{
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+.po-a-bottom{
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+}
+.bg-call{
+  background-color: #DBEAFE;
+}
+.bg-email{
+  background-color: #EDE9FE;
+}
+.bg-map{
+  background-color: #D0FAE5;
+}
+.color-email{
+  color: #7F22FE;
+}
+.py-10{
+  padding-block: 0.625rem;
+}
+.redues-b-l-r{
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.bg-green{
+  background-color: #DCFCE7;
+}
+.color-star{
+  color: #FBBF24;
+}
+button:hover i.color-star{
+  color: #F59E0B;
+}
+.color-call{
+  color: #D97706;
+}
+.color-heart{
+  color: #F43F5E;
+}
+button:hover i.color-heart{
+  color: #f32245;
+}
+.color-heart{
+  color: #F43F5E;
+}
+.color-trash{
+  color: gray;
+}
+button:hover i.color-trash{
+  color: red;
+}
+.color-pen{
+  color: gray;
+}
+button:hover i.color-pen{
+  color: orange;
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+.input-error {
+  border: 1px solid red !important;
+}
+@media (max-width: 639.9px) {
+  .container {
+    max-width: 100% !important;
+  }
+  nav .dd-none {
+    display: none !important;
+  }
+  nav .hover-1 span {
+    display: none;
+  }
+}
