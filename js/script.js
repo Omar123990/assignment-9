@@ -46,43 +46,55 @@ function itemsDeleted() {
 }
 itemsDeleted();
 
-function validateContact() {
-  var isValid = true;
-
+function validateFullName() {
   var nameRegex = /^[A-Za-z ]{2,50}$/;
   if (!nameRegex.test(fullName.value)) {
     document.getElementById("fullNameError").innerText =
       "Name should contain only letters and spaces (2-50 characters)";
     fullName.classList.add("input-error");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("fullNameError").innerText = "";
     fullName.classList.remove("input-error");
+    return true;
   }
+}
 
+function validatePhone() {
   var phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
   if (!phoneRegex.test(pNumber.value)) {
     document.getElementById("phoneError").innerText =
       "Please enter a valid Egyptian phone number";
     pNumber.classList.add("input-error");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("phoneError").innerText = "";
     pNumber.classList.remove("input-error");
+    return true;
   }
+}
 
+function validateEmail() {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(emailInput.value)) {
     document.getElementById("emailError").innerText =
       "Please enter a valid email address";
     emailInput.classList.add("input-error");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("emailError").innerText = "";
     emailInput.classList.remove("input-error");
+    return true;
   }
-  return isValid;
 }
+
+function validateContact() {
+  return validateFullName() && validatePhone() && validateEmail();
+}
+fullName.addEventListener("input", validateFullName);
+pNumber.addEventListener("input", validatePhone);
+emailInput.addEventListener("input", validateEmail);
+
 
 function saveContact() {
   clearValidationMessages();
